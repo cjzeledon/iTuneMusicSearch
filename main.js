@@ -39,8 +39,8 @@ function musicFIND (musicResults){
       <figure>
       <img src="${musicResults.results[i].artworkUrl100}">
       <figcaption>
-      ${musicResults.results[i].trackName}
-      ${musicResults.results[i].artistName}
+      <p class="track">${musicResults.results[i].trackName}</p>
+      <p class="artist">${musicResults.results[i].artistName}</p>
       </figcaption>
       <figure>
       </div>
