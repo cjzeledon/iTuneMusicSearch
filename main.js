@@ -36,13 +36,9 @@ function musicFIND (musicResults){
   for (i = 0; i < musicResults.results.length; i++){
     let populateResults =`
       <div class="individual">
-      <figure>
       <img src="${musicResults.results[i].artworkUrl100}">
-      <figcaption>
       <p class="track">${musicResults.results[i].trackName}</p>
       <p class="artist">${musicResults.results[i].artistName}</p>
-      </figcaption>
-      <figure>
       </div>
     `;
     spaceOUT += populateResults;

@@ -1,9 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Iceland|Nixie+One|Stardos+Stencil');
+
+/*font-family: 'Nixie One', cursive;
+font-family: 'Iceland', cursive;
+font-family: 'Stardos Stencil', cursive;*/
+
 body {
   background-color: #60d9f1;
 }
-
-
+h1{
+font-family: 'Nixie One', cursive, 'Iceland', cursive, 'Stardos Stencil', cursive;
+font-size: 55px;
+text-align: center;
+}
 .individual{
   display: inline-block;
-  width: 300px;
+  width: 230px;
+  background-color: white;
+  margin-bottom: 2px;
+}
+
+.container {
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p.track{
+  font-size: smaller;
+  color: green;
+  text-align: center;
+}
+
+p.artist{
+  color: pink;
+  text-align: center;
+}
+
+img{
+  display: block;
+  margin: auto;
 }
