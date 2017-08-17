@@ -4,19 +4,42 @@
 font-family: 'Iceland', cursive;
 font-family: 'Stardos Stencil', cursive;*/
 
+/*The creation of the background is courtesy of http://lea.verou.me/css3patterns/#carbon-fibre*/
 body {
-  background-color: #60d9f1;
+background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;;
 }
+
+
 h1{
 font-family: 'Nixie One', cursive, 'Iceland', cursive, 'Stardos Stencil', cursive;
 font-size: 55px;
 text-align: center;
+font-weight: bolder;
+color: white;
 }
+
+h3{
+  color: white;
+}
+
 .individual{
   display: inline-block;
   width: 230px;
   background-color: white;
   margin-bottom: 2px;
+  padding-top: 10px;
+  border-radius: 40px;
+  border: 2px solid black;
+}
+
+.individual:hover{
+  background-color: lightgray;
 }
 
 .container {
@@ -25,18 +48,65 @@ text-align: center;
   margin-right: auto;
 }
 
+.search{
+  border-bottom: 4px solid lightgray;
+  margin-bottom: 10px;
+}
+
 p.track{
   font-size: smaller;
-  color: green;
+  color: darkslateblue;
   text-align: center;
 }
 
 p.artist{
-  color: pink;
+  color: chocolate;
   text-align: center;
+  background-color: antiquewhite;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 2px;
 }
 
 img{
   display: block;
   margin: auto;
+  border: 1px solid black;
 }
+
+audio.music-player{
+  display: block;
+  margin: auto;
+}
+
+.search-form{
+  margin-top: 30px;
+}
+
+input#FindSongs{
+  display: block;
+  margin: auto;
+  padding: 15px;
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+p#HitButtons{
+  text-align: center;
+}
+
+input[type=submit], input[type=reset]{
+  padding: 10px;
+  margin: 2px;
+  color: white;
+  border-width: 0px 12px 0px 12px;
+  border-style: double;
+  border-color: white;
+  border-radius:40px 40px 60px 60px;
+  -moz-border-radius:40px 40px 60px 60px;
+  -webkit-border-radius:40px 40px 60px 60px;
+}
+/*Courtesy of http://www.entheosweb.com/tutorials/css/borders.asp*/

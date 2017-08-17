@@ -14,9 +14,9 @@ const search = document.querySelector(".search");
 const searchForm = document.querySelector(".search-form");
 const results = document.querySelector(".results");
 const submitBtn = document.querySelector("#submit");
+const audioURL = document.querySelector("audio");
 
-submitBtn.addEventListener("click",
-  function(ev) {
+submitBtn.addEventListener("click", function(ev) {
     ev.preventDefault();
     let searchSongs = document.querySelector("#FindSongs").value;
     console.log('button works');
@@ -31,12 +31,13 @@ function musicJSON(musicData){
 }
 
 function musicFIND (musicResults){
+  console.log(musicResults);
   let spaceOUT = " ";
   // Do not forget to add link to the thumbnail to probably play music/add music
   for (i = 0; i < musicResults.results.length; i++){
     let populateResults =`
       <div class="individual">
-      <img src="${musicResults.results[i].artworkUrl100}">
+      <img src="${musicResults.results[i].artworkUrl100}"></audio>
       <p class="track">${musicResults.results[i].trackName}</p>
       <p class="artist">${musicResults.results[i].artistName}</p>
       </div>
@@ -45,6 +46,10 @@ function musicFIND (musicResults){
   }
   results.innerHTML = spaceOUT;
 }
+
+// function previewUrl(){
+// console.log
+// }
 
 function catchALL (err){
   console.log(err);
