@@ -30,21 +30,38 @@ function musicJSON(musicData){
   return musicData.json();
 }
 
+function previewSONG(){
+  alert("THIS IS WORKING");
+
+};
+
 function musicFIND (musicResults){
   console.log(musicResults);
   let spaceOUT = " ";
   // Do not forget to add link to the thumbnail to probably play music/add music
-  for (i = 0; i < musicResults.results.length; i++){
+  for (let i = 0; i < musicResults.results.length; i++){
     let populateResults =`
       <div class="individual">
       <img src="${musicResults.results[i].artworkUrl100}"></audio>
       <p class="track">${musicResults.results[i].trackName}</p>
       <p class="artist">${musicResults.results[i].artistName}</p>
+      <p><button class="playButton">Play!</button></p>
       </div>
     `;
     spaceOUT += populateResults;
   }
   results.innerHTML = spaceOUT;
+  // results.addEventListener("click", previewSONG);
+
+  let playbtn = document.querySelectorAll(".playButton");
+
+  for (let i = 0; i < playbtn.length; i++){
+    playbtn[i].addEventListener("click", function(){
+    audioURL.src =  musicResults.results[i].previewUrl;
+    audioURL.play();
+    });
+  }
+
 }
 
 // function previewUrl(){
